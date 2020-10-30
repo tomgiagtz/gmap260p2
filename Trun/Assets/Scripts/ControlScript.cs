@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testMovement : MonoBehaviour
-{
+public class testMovement : MonoBehaviour {
+
     // Start is called before the first frame update
-    void Start()
-    {
-        // test comment for merge conflict
+    private void Start() {
+        // test comment for merge ERROR
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update() {
     }
 }
