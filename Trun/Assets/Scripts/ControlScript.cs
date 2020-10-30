@@ -6,7 +6,7 @@ public class testMovement : MonoBehaviour {
 
     // Start is called before the first frame update
     private void Start() {
-        // test comment for merge ERROR
+        // test comment for merge second error
     }
 
     // Update is called once per frame
