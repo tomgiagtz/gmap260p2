@@ -37,7 +37,6 @@ public class ControlScript : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         float input = Input.GetAxisRaw("Horizontal");
-        Debug.Log(input);
         rb.velocity = new Vector2(input * speed, rb.velocity.y);
 
         if (facingRight == false && input > 0)

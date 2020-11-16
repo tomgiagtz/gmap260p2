@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
-public class Platform : MonoBehaviour
+public class PlatformSpriteRenderer : MonoBehaviour
 {
     
     private BoxCollider2D _collider;
