@@ -8,7 +8,7 @@ public class PlatformSpriteRenderer : MonoBehaviour
     private SpriteRenderer sprite;
 
     private void Awake() {
-       runInEditMode = true; 
+    //    runInEditMode = true; 
     }
     private void Start() {
         _collider = GetComponent<BoxCollider2D>();
