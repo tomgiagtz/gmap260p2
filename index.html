@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | NeonSummit</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 360px; height: 760px; background: #231F20"></canvas>
+    <script src="Build/Desktop.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Desktop.data.gz",
+        frameworkUrl: "Build/Desktop.framework.js.gz",
+        codeUrl: "Build/Desktop.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "gmap260p2",
+        productName: "NeonSummit",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
