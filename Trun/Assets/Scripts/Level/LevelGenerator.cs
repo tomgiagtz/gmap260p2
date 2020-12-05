@@ -3,7 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour {
-    private void Start() {
-        
+    public Transform[] spawnPoints;
+    public GameObject[] rowTypes;
+    public float platformInterval = 10f;
+    private float deltaTime = 0f;
+
+    private void Update() {
+        deltaTime += Time.deltaTime;
+        if (deltaTime >= platformInterval) {
+            int randomIndex = Random.Range(0, rowTypes.Length);
+            Instantiate(rowTypes[randomIndex], transform.position, Quaternion.identity);
+            deltaTime = 0f;
+        }
     }
 }
