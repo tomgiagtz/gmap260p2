@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1136858556476615057}
   - component: {fileID: 1136858556476615058}
   - component: {fileID: 1136858556476615071}
+  - component: {fileID: 3715722817422631246}
   m_Layer: 8
-  m_Name: One-Way Platform 1
+  m_Name: One-Way Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136858556476615060}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -142,3 +143,18 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &3715722817422631246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136858556476615060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74f52b624e6290488824551ae4e0219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  positive: 0
+  deltaY: 0
