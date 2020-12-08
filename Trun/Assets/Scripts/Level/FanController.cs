@@ -18,5 +18,15 @@ public class FanController : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime * (clockwise ? 1 : -1));
+        GlobalMovement();
+        CheckOffScreen();
     }
+    void GlobalMovement() {
+        transform.position = new Vector3(transform.position.x, transform.position.y - LevelController.globalGameSpeed * Time.deltaTime, transform.position.z);
+    }
+    private void CheckOffScreen()  {
+        if (transform.position.y <= -1f) {
+            Destroy(gameObject);
+        }
+    } 
 }
