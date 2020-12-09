@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D Other)
     {
+        Debug.Log("hit");
         if (Other.gameObject.tag == "Enemy")
         {
             health -= 20;
