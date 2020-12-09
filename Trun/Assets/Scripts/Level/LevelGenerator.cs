@@ -10,7 +10,7 @@ public class LevelGenerator : MonoBehaviour {
 
     private void Update() {
         deltaTime += Time.deltaTime;
-        if (deltaTime >= platformInterval * LevelController.globalGameSpeed * 0.5f) {
+        if (deltaTime >= platformInterval * LevelController.globalGameSpeed * 0.9f) {
             int randomIndex = Random.Range(0, rowTypes.Length);
             Instantiate(rowTypes[randomIndex], transform.position, Quaternion.identity);
             deltaTime = 0f;
