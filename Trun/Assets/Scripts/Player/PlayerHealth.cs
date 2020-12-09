@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    //add event on take damage
     public int health = 1;
 
     public float invulnPlayer = 0;
@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
             health -= 20;
             invulnTimer = invulnPlayer;
             gameObject.layer = 10;
+            EventManager.current.HandleTakeDamage();
         }
     }
     // Update is called once per frame
