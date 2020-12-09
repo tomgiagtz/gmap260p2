@@ -34,6 +34,7 @@ public class ControlScript : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        var jumpPressed = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         float input = Input.GetAxisRaw("Horizontal");
@@ -53,11 +54,11 @@ public class ControlScript : MonoBehaviour
             extraJumps = extraJumpValue;
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps >0){
+        if (jumpPressed && extraJumps >0){
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0 && isGrounded == true)
+        else if (jumpPressed && extraJumps > 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
         }
@@ -75,7 +76,7 @@ public class ControlScript : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && wallSliding == true){
+        if (jumpPressed && wallSliding == true){
             wallJumping = true;
             Invoke("setWallJumpFalse", wallJumpTime);
         }
