@@ -308,4 +308,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPre: {fileID: 1075978298971465404, guid: f0f44819735479e48b3eb3bf33785574,
     type: 3}
-  fireDelay: 0.75
+  fireDelay: 1.5
