@@ -5,13 +5,19 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     GameObject[] pauseObjects;
+    public bool playOnStart = false;
     // Start is called before the first frame update
     void Start()
     {
         
-        Time.timeScale = 1;
+        
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        hidePaused();
+        if (playOnStart) {
+            Time.timeScale = 1;
+            hidePaused();
+        } else {
+            Time.timeScale = 0;
+        }
     }
 
 
